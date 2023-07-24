@@ -1,1 +1,84 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Belanosima:wght@400;600&family=Caprasimo&family=Fasthand&family=Foldit:wght@500&family=Lobster&family=Ysabeau+Infant:wght@400;900&family=Ysabeau+SC:wght@800&family=Ysabeau:ital,wght@0,500;0,600;0,900;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Big+Shoulders+Inline+Display:wght@500;700;900&family=Bungee+Spice&family=Cherry+Bomb+One&family=Cormorant:wght@700&family=Dancing+Script:wght@600&family=Dosis:wght@500&family=Foldit&family=Great+Vibes&family=Grechen+Fuemen&family=Instrument+Serif:ital@0;1&family=Kalam&family=Miltonian&family=Miltonian+Tattoo&family=Mogra&family=Monomaniac+One&family=Oi&family=Parisienne&family=Poppins:wght@300;400&family=Rajdhani:wght@500;600;700&family=Rubik+Puddles&family=Sacramento&family=Source+Code+Pro:wght@500;600;700;800&family=Tsukimi+Rounded&family=Ysabeau:wght@300;500&display=swap');
+/* 
+font-family: 'Abril Fatface', cursive;
+font-family: 'Belanosima', sans-serif;
+font-family: 'Caprasimo', cursive;
+font-family: 'Fasthand', cursive;
+font-family: 'Foldit', cursive;
+font-family: 'Lobster', cursive;
+font-family: 'Ysabeau', sans-serif;
+font-family: 'Ysabeau Infant', sans-serif;
+font-family: 'Ysabeau SC', sans-serif;
+font-family: 'Amatic SC', cursive;
+font-family: 'Big Shoulders Inline Display', cursive;
+font-family: 'Bungee Spice', cursive;
+font-family: 'Cherry Bomb One', cursive;
+font-family: 'Cormorant', serif;
+font-family: 'Dancing Script', cursive;
+font-family: 'Dosis', sans-serif;
+font-family: 'Foldit', cursive;
+font-family: 'Great Vibes', cursive;
+font-family: 'Grechen Fuemen', cursive;
+font-family: 'Instrument Serif', serif;
+font-family: 'Kalam', cursive;
+font-family: 'Miltonian', cursive;
+font-family: 'Miltonian Tattoo', cursive;
+font-family: 'Mogra', cursive;
+font-family: 'Monomaniac One', sans-serif;
+font-family: 'Oi', cursive;
+font-family: 'Parisienne', cursive;
+font-family: 'Poppins', sans-serif;
+font-family: 'Rajdhani', sans-serif;
+font-family: 'Rubik Puddles', cursive;
+font-family: 'Sacramento', cursive;
+font-family: 'Source Code Pro', monospace;
+font-family: 'Tsukimi Rounded', sans-serif;
+font-family: 'Ysabeau', sans-serif;
+*/
+
+*{
+    font-family: 'Ysabeau', sans-serif;
+}
+
+.rainbow-hover {
+    font-size: 20px;
+    font-weight: 900;
+    color: #f44d4d;
+    background-color: #0e2f4a;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    position: relative;
+    line-height: 18px;
+    border-radius: 9px;
+    box-shadow: 0px 1px 2px #6b759d,
+      0px 4px 16px #5766a0;
+    transform-style: preserve-3d;
+    transform: scale(var(--s, 1)) perspective(600px)
+      rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+    perspective: 600px;
+    transition: transform 0.1s;
+  }
+  .sp {
+    background: linear-gradient(
+        90deg,
+        #866ee7,
+        #ea60da,
+        #ed8f57,
+        #fbd41d,
+        #2cca91
+      );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    display: block;
+  }
+  
+  .rainbow-hover:active {
+    transition: 0.3s;
+    transform: scale(0.93);
+  }

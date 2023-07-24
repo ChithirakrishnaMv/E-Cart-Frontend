@@ -1,0 +1,55 @@
+<!-- Empty wishlist  -->
+<div class="row" *ngIf="allWishlist.length == 0">
+	<div class="col text-center">
+		<!-- empty wish list -->
+		<img src="https://cdn.dribbble.com/users/1514097/screenshots/3550111/wishlist-icon.gif" alt="">
+		<H3><b> Your Wishlist Is Empty...!</b></H3>
+		<button data-label="Shop More" class="rainbow-hover mt-4 mb-5">
+			<span class="sp" routerLink="">Shop More</span>
+		</button>
+	</div>
+</div>
+
+<!-- product action -->
+<div class="cart-wrap my-5" *ngIf="allWishlist.length !== 0">
+	<div class="main-heading mb-5 mx-5">
+		<h4><b>My Wishlist</b></h4>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12 shadow px-5 py-5">
+				<div class="table-wishlist">
+					<table cellpadding="0" cellspacing="0" border="0" width="100%">
+						<thead>
+							<tr>
+								<th width="5%">No</th>
+								<th width="25%">Product Name</th>
+								<th width="20%">Image</th>
+								<th width="15%">Unit Price</th>
+								<th width="15%">Action </th>
+							</tr>
+						</thead>
+						<tbody *ngFor="let wish of allWishlist ;  let i = index">
+							<tr>
+								<td width="5%"> {{i + 1}}</td>
+								<td width="25%">{{wish.title}} </td>
+								<td>
+									<div class="img-product">
+										<img [src]="wish.image" alt="" class="mCS_img_loaded">
+									</div>
+								</td>
+								<td width="15%" class="price">$ {{wish.price}}</td>
+								<td>
+									<div class="d-flex gap-3">
+										<button class="in-stock-box btn small-btn round-button" (click)=" deleteWishlist(wish.id)"><i class="fa-solid fa-heart-crack py-1"> </i></button>
+										<button class="round-black-btn small-btn round-button"  (click)="addToCart(wish)"><i class="fa-solid fa-cart-shopping py-1"></i></button>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

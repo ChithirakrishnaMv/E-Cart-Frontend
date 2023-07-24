@@ -1,0 +1,50 @@
+                    E-COMMERCE FRONTEND
+                   ---------------------
+
+    1. Create a folder E-cart , inside it create  frontend and backend
+    2. Project Creation : ng new E-Cart-frontend
+    3. Run the frontend : ng s -o
+    4. Clean the code in app.component.ts
+    5. Install 3rd party libraries
+        -> copy & past bootstrap link in index.html
+        -> copy & past fontAwesome cdnjs link in index.html
+        -> copy & past google fonts link in style.css
+    6. creating components
+    7. Lazy loading 
+        ->  [Lazy loading is a technology of angular that allows you to load JavaScript components when a specific route is activated. It improves application load time speed by splitting the application into many bundles. When the user navigates by the app, bundles are loaded as needed.Lazy loading helps to keep the bundle size small, which helps reduce load times. We must use the class decorator to create an Angular module @NgModule, and the decorator uses a metadata object that defines the module.]
+        -> Module Generation - [ ng g m products --route products --module app.module ] 
+        -> Component create inside the product module
+                -> ng g c products/allProducts
+                -> ng g c products/viewProducts
+                -> ng g c products/CartProducts
+                -> ng g c products/WishlistProducts
+        -> Component create outside the product module
+                -> ng g c Header
+                -> ng g c footer
+                -> ng g c PageNotFound
+    8. setup path 
+        -> https://localhost:4200/ => https://localhost:4200/products/allProducts
+           const routes: Routes = [{ path: '', component: AllProductsComponent }];
+        app.routes.module =>  routes;
+            -> const routes: Routes = [
+                    { path: 'products', loadChildren: () => import('./products/products.module').then(m => m.ProductsModule) },
+                    { path: '', redirectTo: '/products',pathMatch:'full'}, // main path 
+                    { path:'**',component:PageNotFoundComponent}
+              ];
+    9. Backend Creation 
+    10. Api Integration
+        -> create api fetching in api.services
+        -> call the function in corresponding component
+        -> Display  the details of the products
+        -> Wishlist Integration
+    11. Search 
+            -> ng g p products/pipes/filter
+        behavior subject
+            -> it is used to share stream of data  from one component to another
+            -> its  under the rxjs libraries
+            -> its asynchronous 
+            -> next method is used to attach the data
+
+
+                
+
