@@ -11,7 +11,10 @@ export class ApiService {
     this.cartCount()
   }
 
-  BASE_URL = 'http://localhost:5000';
+  // BASE_URL = 'http://localhost:5000';
+
+  BASE_URL = 'https://e-cart-backend-b1id.onrender.com'
+  
   //to hold cart count 
   cartItemCount = new BehaviorSubject(0)
   // to hold search data
